@@ -1,0 +1,23 @@
+.Root {
+  flex-grow: 1;
+  display: flex;
+  gap: 40px;
+  min-width: 100%;
+}
+
+.left {
+  background-color: white;
+  flex-grow: 1;
+  border-radius: 20px;
+}
+.right {
+  background-color: white;
+  flex-grow: 1;
+  border-radius: 20px;
+}
+
+.Card {
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  min-height: rem(70);
+  border-radius: 25px;
+}

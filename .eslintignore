@@ -1,0 +1,11 @@
+# folders
+node_modules
+build
+public
+shared
+
+# files
+*.test.js
+*.test.ts
+*.test.tsx
+package-lock.json

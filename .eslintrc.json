@@ -1,0 +1,119 @@
+{
+  // Расширения конфигураций
+  "extends": [
+    "prettier",
+    "eslint:recommended",
+    "plugin:react-hooks/recommended",
+    "plugin:react/recommended",
+    "plugin:import/typescript",
+    "react-app",
+    "react-app/jest",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:react/jsx-runtime"
+  ],
+  
+  // Парсер TypeScript
+  "parser": "@typescript-eslint/parser",
+
+  // Опции парсера
+  "parserOptions": {
+    "ecmaVersion": "latest",
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true,
+      "restParams": true,
+      "spread": true
+    }
+  },
+
+  // Подключенные плагины
+  "plugins": [
+    "@typescript-eslint",
+    "react",
+    "prettier",
+    "import",
+    "promise",
+    "standard",
+    "react-hooks",
+    "markdown"
+  ],
+
+  // Глобальные переменные
+  "globals": {
+    "Element": true,
+    "JSX": true
+  },
+
+  // Правила линтинга
+  "rules": {
+    // TypeScript: Предупреждение при неиспользуемых переменных
+    "@typescript-eslint/no-unused-vars": "warn",
+
+    // TypeScript: Предупреждение при использовании переменных до их определения
+    "@typescript-eslint/no-use-before-define": ["warn"],
+
+    // TypeScript: Предупреждение при использовании явных "any" типов
+    "@typescript-eslint/no-explicit-any": "warn",
+
+    // React: Рекомендация использовать расширение .tsx для файлов с JSX кодом
+    "react/jsx-filename-extension": [
+      "warn",
+      {
+        "extensions": [".tsx"]
+      }
+    ],
+
+    // TypeScript: Отключение правила об избегании теней переменных
+    "@typescript-eslint/no-shadow": ["off"],
+
+    // JavaScript: Отключение правила о неиспользуемых переменных
+    "no-unused-vars": "off",
+
+    // React: Отключение правила обязательных типов для props
+    "react/forbid-prop-types": "off",
+
+    // React: Отключение правила проверки типов для props
+    "react/prop-types": "off",
+
+    // JavaScript: Рекомендация использовать const вместо let
+    "prefer-const": ["warn"],
+
+    // JavaScript: Отключение правила о бесполезных вычисляемых ключах в объектах
+    "no-useless-computed-key": "off",
+
+    // JavaScript: Предупреждение при отсутствии именованного экспорта по умолчанию
+    "import/no-anonymous-default-export": [
+      "warn",
+      {
+        "allowArray": true
+      }
+    ],
+
+    // Тестирование: Отключение некоторых правил тестирования
+    "testing-library/no-node-access": "off",
+    "testing-library/no-container": "off",
+
+    // JavaScript: Предупреждение при использовании debugger
+    "no-debugger": "warn",
+
+    // Импорты: Отключение правила о зависимостях, не включенных в проект
+    "import/no-extraneous-dependencies": "off",
+
+    // JavaScript: Предупреждение при использовании console.warn и console.error
+    "no-console": ["warn", {"allow": ["warn", "error"]}],
+
+    // JavaScript: Предупреждение при использовании пустых блоков кода
+    "no-empty": "warn",
+
+    // Импорты: Отключение правила сортировки импортов
+    "import/order": ["off", {"groups": ["builtin", "external", "parent", "sibling", "index"]}]
+  },
+
+  // Окружение
+  "env": {
+    "es6": true,
+    "browser": true,
+    "node": true,
+    "commonjs": true
+  }
+}
